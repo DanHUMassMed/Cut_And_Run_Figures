@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cutrun-ce11-pipeline"
+version = "0.1.0"
+description = "CUT&RUN analysis pipeline for C. elegans (ce11) benchmarked against modENCODE/modERN and Serizay tissue ATAC"
+requires-python = ">=3.12"
+dependencies = [
+    "numpy",
+    "pandas",
+    "scipy",
+    "matplotlib",
+    "pyBigWig",
+    "pydantic>=2.0",
+    "ipykernel",
+    "python-dotenv",
+    "openpyxl",
+]
+
+[project.optional-dependencies]
+notebook = [
+    "jupyterlab",
+    "notebook",
+    "ipywidgets",
+    "ipykernel",
+]
+yaml = ["pyyaml"]
+test = ["pytest"]
+
+[tool.setuptools]
+packages = []

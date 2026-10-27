@@ -1,0 +1,11 @@
+role,dataset,source
+input,08_bigwig/L5936-0009-0012-Beads_S12_L003.bw,"local, delivered"
+input,08_bigwig/L5936-0009-0013-Beads_S13_L003.bw,"local, delivered"
+input,05_mapq_filter/*_PicardDedup_mapqfilt.sam,"local, delivered"
+input,All_tissues.xlsx,"Serizay et al. 2020 Genome Research supplementary table (number to confirm); reformatted locally"
+reference,"ENCODE portal, 474 ce11 optimal-IDR narrowPeak",https://www.encodeproject.org/search/?type=File&assembly=ce11&file_format=bed&output_type=optimal+IDR+thresholded+peaks
+reference,"GSE28770 GSM713151, GSM713152 (H3K4me3 N2 L3)",https://ftp.ncbi.nlm.nih.gov/geo/series/GSE28nnn/GSE28770/suppl/GSE28770_RAW.tar
+reference,"GSE24318 GSM599725, GSM599726 (H3K4me3 N2 mixed embryo)",https://ftp.ncbi.nlm.nih.gov/geo/series/GSE24nnn/GSE24318/suppl/GSE24318_RAW.tar
+reference,"GSE141210 GSM4197238/239/242/244/247 (tissue ATAC, young adult, pe)",https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM4197nnn/<GSM>/suppl/
+reference,liftOver chain ce6 -> ce11,https://hgdownload.soe.ucsc.edu/goldenPath/ce6/liftOver/ce6ToCe11.over.chain.gz
+annotation,ce11 ws245Genes,https://api.genome.ucsc.edu/getData/track?genome=ce11;track=ws245Genes;chrom=<chrom>

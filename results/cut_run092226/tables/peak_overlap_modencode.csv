@@ -1,0 +1,8 @@
+sample,reference,n_sample_peaks,n_sample_overlapping,pct_sample_in_ref,n_ref_features,n_ref_recovered,pct_ref_recovered,jaccard,fold_vs_shuffled
+S12,modENCODE H3K4me3 L3 union,9037,4106,45.4,4657,3702,79.4,0.3692,3.87
+S12,modENCODE H3K4me3 mixed-embryo union,9037,4062,44.9,3897,3173,81.4,0.3191,2.96
+S12,modENCODE+modERN TF peak union,9037,8114,89.7,41560,10445,25.1,0.2152,1.84
+S13,modENCODE H3K4me3 L3 union,8916,3412,38.2,4657,2437,52.3,0.1481,4.11
+S13,modENCODE H3K4me3 mixed-embryo union,8916,3428,38.4,3897,2247,57.6,0.1072,2.96
+S13,modENCODE+modERN TF peak union,8916,6073,68.1,41560,6049,14.5,0.0856,1.85
+S12,S13 MACS2 peaks,9037,4398,48.7,8916,5458,61.2,0.2188,

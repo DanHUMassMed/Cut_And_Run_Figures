@@ -1,0 +1,5 @@
+track,bigwig,genome_mean_divisor,definition
+Intestine_ATAC,GSM4197242_Intestine_YA_ATAC_pe_rep1.bw,1.49622739247896,bigWig header sumData / nBasesCovered
+Neurons_ATAC,GSM4197239_Neurons_YA_ATAC_pe_rep1.bw,1.496233804701875,bigWig header sumData / nBasesCovered
+Germline_ATAC,GSM4197238_Germline_YA_ATAC_pe_rep1.bw,1.4962288796939083,bigWig header sumData / nBasesCovered
+S12_H3K4me3,L5936-0009-0012-Beads_S12_L003.bw,10.0867708994782,bigWig header sumData / nBasesCovered

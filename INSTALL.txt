@@ -1,0 +1,78 @@
+================================================================================
+CUT&RUN Analysis Pipeline (C. elegans ce11) - Easy Startup Guide
+================================================================================
+
+This guide provides simple, step-by-step instructions designed to get you
+running the analysis notebooks with minimal command-line experience.
+
+--------------------------------------------------------------------------------
+QUICK START (4 SIMPLE STEPS)
+--------------------------------------------------------------------------------
+
+STEP 1: Run the system dependency checker
+-----------------------------------------
+Open your terminal in the project folder and run:
+
+    ./required_dependencies.sh
+
+What this does:
+  - Automatically verifies or installs:
+      1. curl (used to download tools & data)
+      2. make (runs automated build commands)
+      3. uv   (ultra-fast Python package installer)
+  - No manual package installation is required.
+
+STEP 2: Run the automated installer
+-----------------------------------
+Once Step 1 finishes, run:
+
+    make install
+
+What this does automatically:
+  - Creates an isolated Python 3.12 virtual environment (.venv).
+  - Installs all required scientific packages (numpy, pandas, scipy,
+    matplotlib, pyBigWig, jupyterlab, grip, etc.).
+  - Registers the "cut-and-run" Jupyter kernel.
+  - Automatically configures all 10 notebooks to use this kernel by default.
+  - Downloads the UCSC 'liftOver' utility into .venv/bin.
+  - Initializes your default '.env' configuration file if one does not exist.
+
+STEP 3: Configure laboratory data path (.env)
+---------------------------------------------
+Before launching the notebooks, ensure the path to your raw Walker Lab CUT&RUN
+data directory is properly configured in '.env'.
+
+Option A: Set it directly from the terminal with 'echo' (No editor needed!):
+Replace '/path/to/your/cut_run092226' with your actual directory path and run:
+
+    echo 'WALKER_LAB_DIR="/path/to/Walker_lab_shared/Bioinformatics_parent/cut_run092226"' > .env
+
+Option B: Open in a graphical text editor:
+  - On macOS (opens TextEdit):
+      open -e .env
+  - On Linux (opens default GUI editor):
+      xdg-open .env
+  - In terminal editor:
+      nano .env
+
+STEP 4: Launch JupyterLab
+-------------------------
+Once your '.env' is set, start JupyterLab:
+
+    make notebook
+
+JupyterLab will automatically launch in your default web browser pointing
+directly to the 'notebooks/' directory. You can open any notebook and start
+running cells immediately!
+
+--------------------------------------------------------------------------------
+USEFUL COMMANDS
+--------------------------------------------------------------------------------
+
+  make readme     - Open the full documentation guide in your web browser.
+  make notebook   - Launch JupyterLab.
+  make set-kernel - Re-sync the default kernel to all notebooks if needed.
+  make help       - List all available project commands.
+  make clean      - Reset the environment (removes .venv and temporary caches).
+
+================================================================================

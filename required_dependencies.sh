@@ -106,20 +106,16 @@ install_make() {
     info "Installing 'make'..."
     case "$OS" in
         Darwin)
-            if command -v brew >/dev/null 2>&1; then
-                brew install make
-                local brew_gnubin
-                brew_gnubin="$(brew --prefix make)/libexec/gnubin"
-                if [ -d "$brew_gnubin" ]; then
-                    export PATH="$brew_gnubin:$PATH"
-                fi
+            if command -v make >/dev/null 2>&1; then
+                info "Using make: $(command -v make)"
+                return 0
             elif command -v xcode-select >/dev/null 2>&1; then
                 warn "Prompting installation of Apple Command Line Tools (includes make)..."
                 xcode-select --install || true
                 info "Please complete the Apple installation dialog, then re-run this script."
                 exit 0
             else
-                error "Neither Homebrew nor xcode-select found. Install Homebrew (https://brew.sh) or Xcode tools."
+                error "Neither make nor xcode-select found. Install Apple Command Line Tools or Xcode."
                 exit 1
             fi
             ;;
@@ -142,6 +138,7 @@ install_make() {
             fi
             ;;
     esac
+
 }
 
 # ------------------------------------------------------------------------------
